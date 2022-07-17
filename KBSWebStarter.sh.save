@@ -1,0 +1,4 @@
+if ! ps ax | grep -q "[W]ebApplication.py"; then
+	cho "Restarting KBS WebApplication :  $(date)" >> /home/ubuntu/KBS/KBS_WebApp/WebAppStart.log
+	nohup /usr/bin/python3.7 /home/ubuntu/KBS/KBS_WebApp/WebApplication.py &
+fi
